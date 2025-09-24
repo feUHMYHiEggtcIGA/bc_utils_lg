@@ -1,6 +1,4 @@
 use std::sync::LazyLock;
-use std::fs::File;
-use std::io::BufReader;
 use std::vec;
 
 use crate::types::maps::{
@@ -10,7 +8,6 @@ use crate::types::maps::{
 use crate::structs::settings::{
     SETTINGS_IND, 
     SETTINGS_USED_SRC,
-    SETTINGS as SETTINGS_STRUCT,
 };
 
 
