@@ -1,7 +1,11 @@
 #![allow(non_camel_case_types)]
 
-use crate::types::maps::MAP;
 use serde::{Deserialize, Serialize};
+
+use crate::types::maps::{
+    MAP,
+    MAP_LINK,
+};
 
 
 #[derive(Serialize, Deserialize)]
@@ -37,5 +41,5 @@ pub struct SETTINGS_MSG {
 pub struct SETTINGS {
     pub exch: SETTINGS_EXCH,
     pub msg: SETTINGS_MSG,
-    pub indications: MAP<String, SETTINGS_IND>,
+    pub indications: MAP_LINK<String, SETTINGS_IND>,
 }

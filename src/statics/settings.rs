@@ -106,10 +106,4 @@ pub static SETTINGS_RSI_EMPTY: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLo
         .collect()
 });
 
-pub static SETTINGS: LazyLock<SETTINGS_STRUCT> = LazyLock::new(|| {
-    // change_this: path
-    let reader = BufReader::new(File::open("../../settings.json").expect("file not found"));
-    serde_json::from_reader(reader).expect("settings.json is not decerialized")
-});
-
 pub const WINDOW: usize = 2;
