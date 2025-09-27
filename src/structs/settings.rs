@@ -26,9 +26,9 @@ pub struct SETTINGS_IND {
 
 #[derive(Serialize, Deserialize)]
 pub struct SETTINGS_EXCH {
-    pub api_url: String,
-    pub api_key: String,
-    pub api_secret: String,
+    pub url: String,
+    pub key: String,
+    pub secret: String,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -40,6 +40,5 @@ pub struct SETTINGS_MSG {
 #[derive(Serialize, Deserialize)]
 pub struct SETTINGS {
     pub exch: SETTINGS_EXCH,
-    pub msg: SETTINGS_MSG,
     pub indications: MAP_LINK<String, SETTINGS_IND>,
 }
