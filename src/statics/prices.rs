@@ -4,9 +4,11 @@
 use std::sync::LazyLock;
 
 use crate::types::structures::{
+    SRC_EL as SRC_EL_T,
     SRC as SRC_T,
-    SRCS as SRCS_T,
+    SRC_TRANSPOSE as SRC_TRANSPOSE_T,
 };
+use crate::types::maps::MAP;
 
 
 pub const OPEN: [f64; 50] = [
@@ -63,20 +65,20 @@ pub const HIGH_LAST: f64 = 2.2660;
 pub const LOW_LAST: f64 = 2.2490;
 pub const CLOSE_LAST: f64 = 2.2540;
 
-pub static SRC: LazyLock<SRC_T<f64>> = LazyLock::new(||SRC_T::from_iter([
+pub static SRC_EL: LazyLock<SRC_EL_T<f64>> = LazyLock::new(||SRC_EL_T::from_iter([
     ("open".to_string(), 2.2547),
     ("high".to_string(), 2.2660),
     ("low".to_string(), 2.2490),
     ("close".to_string(), 2.2540),
 ]));
-pub static SRCS: LazyLock<SRCS_T<f64>> = LazyLock::new(|| SRCS_T::from_iter([
+pub static SRC_TRANSPOSE: LazyLock<SRC_TRANSPOSE_T<f64>> = LazyLock::new(|| SRC_TRANSPOSE_T::from_iter([
     ("open".to_string(), OPEN.to_vec()),
     ("high".to_string(), HIGH.to_vec()),
     ("low".to_string(), LOW.to_vec()),
     ("close".to_string(), CLOSE.to_vec()),
 ]));
-pub static SRC_VEC: LazyLock<Vec<SRC_T<f64>>> = LazyLock::new(|| (0..50).map(
-        |i| SRC_T::from_iter([
+pub static SRC: LazyLock<SRC_T<f64>> = LazyLock::new(|| (0..50).map(
+        |i| MAP::from_iter([
         ("open".to_string(), OPEN[i]),
         ("high".to_string(), HIGH[i]),
         ("low".to_string(), LOW[i]),
