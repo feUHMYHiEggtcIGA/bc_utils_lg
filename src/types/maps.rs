@@ -15,7 +15,7 @@ pub type MAP<K, V> = FxHashMap<K, V>;
 pub type MAP_LINK<K, V> = IndexMap<K, V, BuildHasherDefault<FxHasher>>;
 
 
-pub type MAP_BF_VEC<'a, T> = MAP_LINK<&'a str, BF_VEC<T>>;
+pub type MAP_BF_VEC<'a, T> = MAP<&'a str, BF_VEC<T>>;
 pub type MAP1_BF_VEC<'a, T> = FxHashMap<&'a str, MAP_BF_VEC<'a, T>>;
 pub type MAP_IND_T<'a, F> = FxHashMap<&'a str, IND_T<F>>;
 pub type MAP_FUNC_T<'a, F> = FxHashMap<&'a str, FUNC_T<F>>;
