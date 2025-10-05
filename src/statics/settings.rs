@@ -79,6 +79,40 @@ pub static SETTINGS_IND_TEST: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLoc
                 used_bf: vec![],   
             },
         ),
+        (
+            "sma_1".to_string(),
+            SETTINGS_IND{
+                key: String::from("sma"),
+                kwargs_usize: MAP::from_iter([("window", 10)]),
+                kwargs_f64: MAP::default(),
+                kwargs_string: MAP::default(),
+                used_src: vec![
+                    SETTINGS_USED_SRC{
+                        key: "open".to_string(),
+                        sub_from_last_i: 0,
+                    }
+                ],
+                used_ind: vec![],
+                used_bf: vec![],   
+            }
+        ),
+        (
+            "mm_scaler_1".to_string(),
+            SETTINGS_IND{
+                key: String::from("mm_scaler_1"),
+                kwargs_usize: MAP::from_iter([("window", 0)]),
+                kwargs_f64: MAP::default(),
+                kwargs_string: MAP::default(),
+                used_src: vec![
+                    SETTINGS_USED_SRC{
+                        key: "open".to_string(),
+                        sub_from_last_i: 0,
+                    }
+                ],
+                used_ind: vec![],
+                used_bf: vec!["sma_1".to_string()],
+            },
+        )
     ]
         .into_iter()
         .collect()
