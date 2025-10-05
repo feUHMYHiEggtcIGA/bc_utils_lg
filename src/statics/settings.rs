@@ -35,6 +35,7 @@ pub static SETTINGS_IND_TEST: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLoc
                     }
                 ],
                 used_ind: vec![],
+                used_bf: vec![],
             }
         ),
         (
@@ -46,6 +47,7 @@ pub static SETTINGS_IND_TEST: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLoc
                 kwargs_string: MAP::default(),
                 used_src: vec![],
                 used_ind: vec!["src_1".to_string()],
+                used_bf: vec![],
             },
         ),
         (
@@ -57,6 +59,7 @@ pub static SETTINGS_IND_TEST: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLoc
                 kwargs_string: MAP::default(),
                 used_src: vec![],
                 used_ind: vec!["rsi_1".to_string()],
+                used_bf: vec![],
             },
         ),
         (
@@ -73,6 +76,7 @@ pub static SETTINGS_IND_TEST: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLoc
                     }
                 ],
                 used_ind: vec!["rsi_2".to_string()],
+                used_bf: vec![],   
             },
         ),
     ]
@@ -96,6 +100,7 @@ pub static SETTINGS_RSI_EMPTY: LazyLock<MAP_LINK<String, SETTINGS_IND>> = LazyLo
                     }
                 ],
                 used_ind: vec![],
+                used_bf: vec![],
             },
         )
     ]
