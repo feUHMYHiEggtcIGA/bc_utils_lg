@@ -22,7 +22,6 @@ pub struct SETTINGS_IND {
     pub kwargs_string: MAP<String, String>,
     pub used_src: Vec<SETTINGS_USED_SRC>,
     pub used_ind: Vec<String>,
-    pub used_bf: Vec<String>,
 }
 
 #[derive(Serialize, Deserialize)]
